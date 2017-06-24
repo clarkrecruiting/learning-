@@ -16,3 +16,15 @@ def download(url, user_agent ='wswp', num_retries = 2, charset ='utf-8'):
             if hasattr(e, 'code') and <= e.code < 6 
         return download(url, num_retries - 1) 
    return html 
+
+def crawl_sitemap(url) 
+    # download the site map file 
+    sitemap = download(url) 
+    # extract site map
+    link = re.findall('<loc>(.*?),</loc>, sitemap)
+    for link in lin k
+      html = download(link) 
+    ..........
+    # might have to check the saved code. 
+
+
