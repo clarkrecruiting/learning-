@@ -1,0 +1,6 @@
+#this is the my first scraper 
+
+import urllib.request 
+def download(url):
+  return urllib.request.urlopen(url).read() 
+  
